@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TG - Smartphone e acessórios</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="imagens/LOGOTG.png" alt="TG">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="prodtext.html">Produtos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#historia">História</a></li>
+      </ul>
+      <a href="https://wa.me/5567998855290" class="btn-contato" target="_blank">Contato</a>
+    </nav>
+  </header>
+
+  <div class="menu-lateral" id="menuLateral">
+    <div class="menu-lateral-header">
+      <img src="imagens/LOGOTG.png" alt="TG">
+      <div class="close-icon" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+        <li><a href="prodtext.html" onclick="toggleMenu()">Produtos</a></li>
+        <li><a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a></li>
+        <li><a href="#historia" onclick="toggleMenu()">História</a></li>
+        <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <section id="home" class="carrossel">
+    <div class="slides-container">
+      <div class="slide active">
+        <img src="imagens/iphone 16 pro maxprincipal.png" alt="Produto 1">
+        <div class="descricao">
+          <h3>IPhone 16 Pro Max</h3>
+          <p> Tela LTPO Super Retina XDR OLED de 6,9 polegadas com taxa de atualização de 120 Hz. <br>
+              Equipado com o chip A18 Pro, oferece desempenho avançado e suporte a Wi-Fi 7. <br>
+              O sistema de câmeras inclui sensores de 48 MP e gravação de vídeo em 4K a 120 fps. <br>
+             A bateria aprimorada proporciona até 33 horas de reprodução de vídeo.</p>
+          <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max
+  " class="btn-saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="imagens/iphone 16principal.png" alt="Produto 2">
+        <div class="descricao">
+          <h3>IPhone 16</h3>
+          <p>Tela LTPO Super Retina XDR OLED de 6,7 polegadas com taxa de atualização de 120 Hz. <br>  
+            Equipado com o chip A18, oferece alto desempenho e eficiência energética. <br>  
+            O sistema de câmeras inclui sensores de 48 MP e gravação de vídeo em 4K a 60 fps. <br>  
+            A bateria otimizada proporciona até 29 horas de reprodução de vídeo.</p>
+            <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016" class="btn-saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="imagens/SamgsungS24principal.png" alt="Produto 3">
+        <div class="descricao">
+          <h3>Samsung S24</h3>
+          <p>Tela Dynamic AMOLED 2X de 6,2 polegadas com taxa de atualização de 120 Hz. <br>
+            Equipado com o processador Snapdragon 8 Gen 3, oferece alto desempenho e eficiência. <br>
+            O sistema de câmeras inclui sensores de 50 MP e gravação de vídeo em 8K a 30 fps. <br>
+            A bateria otimizada proporciona até 30 horas de reprodução de vídeo.</p>
+          <a href="texto.html" class="btn-saiba-mais">Saiba mais</a>
+        </div>
+      </div>
+    </div>
+    <button class="carrossel-btn anterior" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="carrossel-btn proximo" onclick="mudarSlide(1)">&#10095;</button>
+  </section>
+
+  <section id="depoimentos" class="depoimentos">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="depoimentos-container">
+      <div class="depoimento-slide active">
+        <img src="imagens/meu amor.png" alt="Cliente 1">
+        <p>"Ótimo produto e atendimento!"</p>
+        <button class="btn-curtir" onclick="curtirDepoimento(0)">
+          <i class="fas fa-heart"></i> <span class="contador">0</span>
+        </button>
+      </div>
+      <div class="depoimento-slide">
+        <img src="imagens/cliente2.jpg" alt="Cliente 2">
+        <p>"Recomendo a todos, excelente qualidade!"</p>
+        <button class="btn-curtir" onclick="curtirDepoimento(1)">
+          <i class="fas fa-heart"></i> <span class="contador">0</span>
+        </button>
+      </div>
+      <div class="depoimento-slide">
+        <img src="imagens/cliente3.jpg" alt="Cliente 3">
+        <p>"Superou minhas expectativas!"</p>
+        <button class="btn-curtir" onclick="curtirDepoimento(2)">
+          <i class="fas fa-heart"></i> <span class="contador">0</span>
+        </button>
+      </div>
+    </div>
+    <button class="depoimentos-btn anterior" onclick="mudarDepoimento(-1)">&#10094;</button>
+    <button class="depoimentos-btn proximo" onclick="mudarDepoimento(1)">&#10095;</button>
+  </section>
+
+  <section id="historia" class="historia">
+    <h2>Nossa História</h2>
+    <p>Texto sobre a história da empresa, missão, visão e valores.</p>
+    <div class="fundo-video">
+    </div>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <form id="form-contato">
+      <input type="text" placeholder="Nome" required>
+      <input type="email" placeholder="E-mail" required>
+      <textarea placeholder="Mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="info-contato">
+      <p>Telefone: (11) 1234-5678</p>
+      <p>E-mail: contato@empresa.com</p>
+      <p>Redes Sociais: <a href="https://www.instagram.com/tg_smartphone_acessorios/" target="_blank"><img src="imagens/icone.png" alt="instagram"></a></p>
+    </div>
+  </section>
+
+  <!-- Ícone flutuante do WhatsApp -->
+  <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max
+  " class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="scripts.js"></script>
+</body>
+</html> 

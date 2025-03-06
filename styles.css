@@ -1,0 +1,378 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  color: #FFD700;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #FFD700;
+  box-shadow: 0 0 20px 25px #FFD700;
+}
+
+header img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Menu de navegação (desktop) */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.desktop-nav ul li {
+  margin: 0 15px;
+}
+
+.desktop-nav ul li a {
+  color: #010101;
+  text-decoration: none;
+}
+
+.desktop-nav .btn-contato {
+  background-color: #000000;
+  color: #FFD700;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Ícone do menu hambúrguer (mobile) */
+.menu-icon {
+  display: none; /* Escondido por padrão */
+  font-size: 24px;
+  cursor: pointer;
+  color: #010101;
+}
+
+/* Menu lateral (mobile) */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: 100%;
+  width: 250px;
+  height: 100%;
+  background-color: #000000;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-lateral.active {
+  right: 0;
+}
+
+.menu-lateral-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #FFD700;
+}
+
+.menu-lateral-header img {
+  width: 50px;
+  height: 50px;
+}
+
+.menu-lateral-header .close-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+.menu-lateral nav ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.menu-lateral nav ul li {
+  margin: 15px 0;
+}
+
+.menu-lateral nav ul li a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Media Queries para mobile */
+@media (max-width: 768px) {
+  /* Esconde o menu de navegação desktop */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Exibe o ícone do menu hambúrguer */
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Estilos do Carrossel */
+.carrossel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel .slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carrossel .slide.active {
+  opacity: 1;
+}
+
+.carrossel img {
+  display: block; /* Garante que a imagem se comporte como bloco */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  width: auto;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.carrossel img:hover {
+  transform: scale(1.05);
+  border-radius: 10px 10px 0 0;
+}
+
+.carrossel .descricao {
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 0 0 10px 10px;
+}
+
+.carrossel .descricao h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.carrossel .descricao p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+.carrossel .btn-saiba-mais {
+  background-color: #FFD700;
+  color: #000000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+  text-align: center;
+
+}
+
+.carrossel .btn-saiba-mais:hover {
+  background-color: #e6b800;
+}
+
+.carrossel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 215, 0, 0.7);
+  color: #000000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carrossel-btn.anterior {
+  left: 10px;
+}
+
+.carrossel-btn.proximo {
+  right: 10px;
+}
+
+.carrossel-btn:hover {
+  background-color: #FFD700;
+}
+
+/* Estilos da Seção de Depoimentos */
+.depoimentos {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #111;
+}
+
+.depoimentos p{
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.depoimentos h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #FFD700;
+}
+
+.depoimentos-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.depoimento-slide {
+  width: 100%;
+  display: none;
+  text-align: center;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.depoimento-slide.active {
+  display: block;
+  opacity: 1;
+}
+
+.depoimentos-btn {
+  position: relative;
+  top: 50%;
+  transform: translateY(-95%);
+  background-color: rgba(255, 215, 0, 0.7);
+  color: #000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.depoimentos-btn.anterior {
+  left: -50px;
+}
+
+.depoimentos-btn.proximo {
+  right: -50px;
+}
+
+.depoimentos-btn:hover {
+  background-color: #FFD700;
+}
+
+.btn-curtir {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-curtir:hover {
+  background-color: #e6b800;
+}
+
+.btn-curtir i {
+  margin-right: 5px;
+}
+
+.depoimentos img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+/* Ícone flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+.historia  {
+  text-align: center;
+  padding-top: 30px;
+}
+.contato  {
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* Media Queries para mobile */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .carrossel img{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .whatsapp-float {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 10px;
+    right: 10px;
+  }
+}

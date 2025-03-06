@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TG - Smartphone e acessórios</title>
+  <link rel="stylesheet" href="Produtos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="imagens/LOGOTG.png" alt="TG">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#historia">História</a></li>
+      </ul>
+      <a href="https://wa.me/5567998855290" class="btn-contato" target="_blank">Contato</a>
+    </nav>
+  </header>
+
+  <div class="menu-lateral" id="menuLateral">
+    <div class="menu-lateral-header">
+      <img src="imagens/LOGOTG.png" alt="TG">
+      <div class="close-icon" onclick="toggleMenu()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+        <li><a href="#produtos" onclick="toggleMenu()">Produtos</a></li>
+        <li><a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a></li>
+        <li><a href="#historia" onclick="toggleMenu()">História</a></li>
+        <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- Seção de Produtos -->
+  <section id="produtos" class="produtos">
+    <h2>Nossos Produtos</h2>
+    <div class="grid-produtos">
+      <div class="produto">
+        <img src="imagens/iphone16promax.png" alt="iPhone 16 Pro Max">
+        <h3>iPhone 16 Pro Max</h3>
+        <p>Tela Super Retina XDR de 6,9 polegadas, chip A18 Pro, câmera de 48 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+      <div class="produto">
+        <img src="imagens/produto2.png" alt="iPhone 16">
+        <h3>iPhone 16</h3>
+        <p>Tela Super Retina XDR de 6,7 polegadas, chip A18, câmera de 48 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+      <div class="produto">
+        <img src="imagens/SamsungS24.png" alt="Samsung Galaxy S24">
+        <h3>Samsung Galaxy S24</h3>
+        <p>Tela Dynamic AMOLED de 6,8 polegadas, chip Exynos 2200, câmera de 108 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Samsung%20Galaxy%20S24" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+      <div class="produto">
+        <img src="imagens/note13pro.png" alt="Xiaomi 13 Pro">
+        <h3>Xiaomi 13 Pro</h3>
+        <p>Tela AMOLED de 6,73 polegadas, chip Snapdragon 8 Gen 2, câmera de 50 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Xiaomi%2013%20Pro" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+      <div class="produto">
+        <img src="imagens/google_pixel_8.png" alt="Google Pixel 8 Pro">
+        <h3>Google Pixel 8 Pro</h3>
+        <p>Tela OLED de 6,7 polegadas, chip Tensor G3, câmera de 50 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Google%20Pixel%208%20Pro" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+      <div class="produto">
+        <img src="imagens/oneplus_11.png" alt="OnePlus 11">
+        <h3>OnePlus 11</h3>
+        <p>Tela Fluid AMOLED de 6,7 polegadas, chip Snapdragon 8 Gen 2, câmera de 50 MP.</p>
+        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20OnePlus%2011" class="btn-saiba-mais" target="_blank">Saiba mais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ícone flutuante do WhatsApp -->
+  <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
