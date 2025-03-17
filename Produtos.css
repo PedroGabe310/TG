@@ -191,6 +191,81 @@
     background-color: #e6b800;
   }
   
+/* Estilos do Rodapé */
+.rodape {
+  background-color: #000000;
+  color: #FFD700;
+  padding: 40px 20px;
+  border-top: 1px solid #FFD700;
+}
+
+.rodape .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.rodape .coluna {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.rodape h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #FFD700;
+}
+
+.rodape p, .rodape ul {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #FFD700;
+}
+
+.rodape ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape ul li {
+  margin-bottom: 10px;
+}
+
+.rodape ul li a {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.rodape ul li a:hover {
+  text-decoration: underline;
+}
+
+.rodape .redes-sociais {
+  display: flex;
+  gap: 10px;
+}
+
+.rodape .redes-sociais img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.rodape .redes-sociais img:hover {
+  transform: scale(1.2);
+}
+
+.rodape p {
+  margin-top: 20px;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}
+
+
   /* Media Queries para Responsividade */
   @media (max-width: 768px) {
     .grid-produtos {

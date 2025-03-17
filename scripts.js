@@ -32,29 +32,43 @@ mostrarSlide();
 // Auto-play (opcional)
 setInterval(() => mudarSlide(1), 5000);
 
-// Lógica do Carrossel de Depoimentos
-let depoimentoIndex = 0;
+document.addEventListener('DOMContentLoaded', function () {
+  const depoimentos = document.querySelectorAll('.depoimento');
+  const btnAnterior = document.querySelector('.anterior');
+  const btnProximo = document.querySelector('.proximo');
+  let currentIndex = 0;
 
-function mostrarDepoimento() {
-  const depoimentos = document.querySelectorAll(".depoimento-slide");
+  function mostrarDepoimento(index) {
+      depoimentos.forEach((depoimento, i) => {
+          depoimento.classList.remove('ativo');
+          if (i === index) {
+              depoimento.classList.add('ativo');
+          }
+      });
+  }
+  mostrarDepoimento(currentIndex);
 
-  depoimentos.forEach((depoimento) => depoimento.classList.remove("active"));
-  depoimentos[depoimentoIndex].classList.add("active");
-}
+  btnProximo.addEventListener('click', function () {
+      currentIndex = (currentIndex + 1) % depoimentos.length;
+      mostrarDepoimento(currentIndex);
+  });
 
-function mudarDepoimento(n) {
-  const depoimentos = document.querySelectorAll(".depoimento-slide");
-  depoimentoIndex += n;
+  btnAnterior.addEventListener('click', function () {
+      currentIndex = (currentIndex - 1 + depoimentos.length) % depoimentos.length;
+      mostrarDepoimento(currentIndex);
+  });
 
-  if (depoimentoIndex >= depoimentos.length) depoimentoIndex = 0;
-  if (depoimentoIndex < 0) depoimentoIndex = depoimentos.length - 1;
+  const botoesCurtir = document.querySelectorAll('.btn-curtir');
 
-  mostrarDepoimento();
-}
-
-mostrarDepoimento();
-
-// Auto-play (opcional)
+  botoesCurtir.forEach(botao => {
+      botao.addEventListener('click', function () {
+          let contador = parseInt(this.querySelector('.contador').textContent);
+          contador++;
+          this.querySelector('.contador').textContent = contador;
+          localStorage.setItem('curtidas', contador);
+      });
+  });
+});
 setInterval(() => mudarDepoimento(1), 5000);
 
 // Lógica do Botão Curtir
