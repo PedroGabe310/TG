@@ -1,132 +1,210 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TG - Smartphone e acessórios</title>
-  <link rel="stylesheet" href="Produtos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="description" content="Conheca o atendimento premium da MP TECH STORE, com consultoria, processo de compra claro e suporte pos-venda.">
+  <title>Atendimento Premium | MP TECH STORE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <img src="LOGOTG.png" alt="TG">
-    <div class="menu-icon" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </div>
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#produtos">Produtos</a></li>
-        <li><a href="index.html#depoimentos">Depoimentos</a></li>
-        <li><a href="index.html#historia">História</a></li>
-      </ul>
-      <a href="https://wa.me/5567998855290" class="btn-contato" target="_blank">Contato</a>
-    </nav>
-  </header>
-
-  <div class="menu-lateral" id="menuLateral">
-    <div class="menu-lateral-header">
-      <img src="LOGOTG.png" alt="TG">
-      <div class="close-icon" onclick="toggleMenu()">
-        <i class="fas fa-times"></i>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="MP TECH STORE">
+        <img src="Logo_TG__2_-removebg-preview.png" alt="Logo MP TECH STORE">
+        <div>
+          <span class="brand-kicker">MP TECH STORE</span>
+          <strong>Atendimento premium</strong>
+        </div>
+      </a>
+      <nav class="main-nav" aria-label="Principal">
+        <a href="index.html">Inicio</a>
+        <a href="Apple.html">Apple</a>
+        <a href="Xiaomi.html">Android</a>
+        <a href="prodtext.html">Atendimento</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-primary btn-small" href="https://wa.me/5567992517070?text=Ola%2C%20quero%20entender%20como%20funciona%20o%20atendimento%20da%20MP%20TECH%20STORE." target="_blank" rel="noreferrer">Iniciar conversa</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="mobile-panel" aria-expanded="false" data-menu-toggle>
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
-        <li><a href="#produtos" onclick="toggleMenu()">Produtos</a></li>
-        <li><a href="index.html#depoimentos" onclick="toggleMenu()">Depoimentos</a></li>
-        <li><a href="#index.htmlhistoria" onclick="toggleMenu()">História</a></li>
-        <li><a href="index.html#contato" onclick="toggleMenu()">Contato</a></li>
-      </ul>
-    </nav>
+    </header>
+
+    <div class="mobile-backdrop" data-mobile-backdrop></div>
+    <aside class="mobile-panel" id="mobile-panel" data-mobile-panel aria-hidden="true">
+      <div class="mobile-panel-header">
+        <span>Menu MP TECH STORE</span>
+        <button class="menu-toggle close" type="button" aria-label="Fechar menu" data-menu-toggle>
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="index.html" data-close-menu>Inicio</a>
+        <a href="Apple.html" data-close-menu>Apple</a>
+        <a href="Xiaomi.html" data-close-menu>Android</a>
+        <a href="prodtext.html" data-close-menu>Atendimento</a>
+        <a href="#contato" data-close-menu>Contato</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section class="page-hero section">
+        <div class="page-hero-copy reveal">
+          <span class="eyebrow">Atendimento premium</span>
+          <h1>Uma pagina nova para explicar por que comprar na MP TECH STORE pode ser mais seguro, bonito e simples.</h1>
+          <p>
+            Alem do catalogo, voce agora tem um espaco dedicado a mostrar como a marca atende,
+            orienta e acompanha o cliente. Isso ajuda a profissionalizar ainda mais o projeto.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5567992517070?text=Ola%2C%20quero%20iniciar%20um%20atendimento%20com%20a%20MP%20TECH%20STORE." target="_blank" rel="noreferrer">Quero atendimento agora</a>
+            <a class="btn btn-secondary" href="index.html">Voltar para a home</a>
+          </div>
+        </div>
+
+        <div class="page-hero-visual reveal">
+          <div class="insight-panel">
+            <span class="tag">Novo</span>
+            <h2>Marca mais madura</h2>
+            <p>Agora o projeto tambem vende processo, seguranca e sensacao de marca premium.</p>
+            <div class="spec-list">
+              <span>Consultoria</span>
+              <span>Pagamento claro</span>
+              <span>Pos-venda presente</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <span class="eyebrow">Pilares do atendimento</span>
+          <h2>O que o cliente percebe quando fala com a MP TECH STORE</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value-card reveal">
+            <h3>Escuta real</h3>
+            <p>A recomendacao comeca entendendo rotina, prioridade e faixa de investimento do cliente.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3>Indicacao objetiva</h3>
+            <p>Menos excesso de informacao e mais clareza sobre qual aparelho faz sentido.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3>Negociacao transparente</h3>
+            <p>Pagamento, prazos e etapas explicados de forma simples para gerar seguranca.</p>
+          </article>
+          <article class="value-card reveal">
+            <h3>Relacao continua</h3>
+            <p>O cliente recebe suporte tambem no pos-venda, reforcando confianca e proximidade.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <span class="eyebrow">Etapas da jornada</span>
+          <h2>Da primeira mensagem ate a entrega</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-card reveal">
+            <span>01</span>
+            <h3>Contato inicial</h3>
+            <p>O cliente chega por indicacao, Instagram ou site e explica o que esta buscando.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span>02</span>
+            <h3>Curadoria e proposta</h3>
+            <p>A MP TECH STORE organiza as melhores opcoes e mostra qual entrega mais valor para aquele perfil.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span>03</span>
+            <h3>Fechamento com clareza</h3>
+            <p>Pagamento alinhado, orientacoes passadas e confirmacao de todos os detalhes da compra.</p>
+          </article>
+          <article class="timeline-card reveal">
+            <span>04</span>
+            <h3>Entrega e acompanhamento</h3>
+            <p>Rastreio, confirmacao de recebimento e abertura para qualquer suporte necessario.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head reveal">
+          <span class="eyebrow">Perguntas frequentes</span>
+          <h2>Respostas que ajudam a gerar mais confianca</h2>
+        </div>
+        <div class="faq-grid">
+          <details class="faq-card reveal">
+            <summary>Como escolho o modelo certo?</summary>
+            <p>O atendimento da MP TECH STORE considera seu tipo de uso, camera, desempenho, tamanho ideal e faixa de investimento.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>Quais formas de pagamento estao disponiveis?</summary>
+            <p>Pix, entrada com complemento parcelado e parcelamento no credito conforme a proposta combinada.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>Existe apoio depois da compra?</summary>
+            <p>Sim. O projeto reforca o pos-venda como parte da experiencia, com orientacao e acompanhamento.</p>
+          </details>
+          <details class="faq-card reveal">
+            <summary>Posso pedir ajuda para comparar marcas?</summary>
+            <p>Sim. A MP TECH STORE pode comparar Apple, Samsung, Xiaomi e Google de forma simples e objetiva.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section cta-section reveal">
+        <div class="cta-panel">
+          <div>
+            <span class="eyebrow">Atendimento que vende mais</span>
+            <h2>Uma marca forte nasce quando produto e experiencia falam a mesma lingua.</h2>
+            <p>Com essa nova pagina, o projeto ficou mais preparado para transmitir profissionalismo e inovacao.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/5567992517070?text=Ola%2C%20quero%20iniciar%20um%20atendimento%20premium." target="_blank" rel="noreferrer">Iniciar atendimento</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contato">
+      <div class="footer-grid">
+        <div>
+          <span class="eyebrow">MP TECH STORE</span>
+          <h3>Uma presenca mais premium, consultiva e alinhada ao mercado de tecnologia.</h3>
+          <p>Esta pagina reforca que a MP TECH STORE nao vende so aparelhos. Ela vende confianca e experiencia.</p>
+        </div>
+        <div>
+          <h4>Navegacao</h4>
+          <a href="index.html">Inicio</a>
+          <a href="Apple.html">Apple</a>
+          <a href="Xiaomi.html">Android</a>
+          <a href="prodtext.html">Atendimento</a>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <a href="https://wa.me/5567992517070" target="_blank" rel="noreferrer">(67) 99251-7070</a>
+          <a href="mailto:tgsmartphones980@gmail.com">Contato por e-mail</a>
+          <a href="https://www.instagram.com/tg_smartphone_acessorios" target="_blank" rel="noreferrer">Instagram oficial</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> MP TECH STORE.</span>
+        <span>Pagina de atendimento criada para reforcar profissionalismo.</span>
+      </div>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5567992517070?text=Ola%2C%20quero%20falar%20com%20a%20MP%20TECH%20STORE." target="_blank" rel="noreferrer" aria-label="Falar no WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
   </div>
-
-  <!-- Seção de Produtos -->
-  <section id="produtos" class="produtos">
-    <h2>Nossos Produtos</h2>
-    <div class="grid-produtos">
-      <div class="produto">
-        <img src="iphone16promax.png" alt="iPhone 16 Pro Max">
-        <h3>iPhone 16 Pro Max</h3>
-        <p>Tela Super Retina XDR de 6,9 polegadas, chip A18 Pro, câmera de 48 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-      <div class="produto">
-        <img src="produto2.png" alt="iPhone 16">
-        <h3>iPhone 16</h3>
-        <p>Tela Super Retina XDR de 6,7 polegadas, chip A18, câmera de 48 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-      <div class="produto">
-        <img src="SamsungS24.png" alt="Samsung Galaxy S24">
-        <h3>Samsung Galaxy S24</h3>
-        <p>Tela Dynamic AMOLED de 6,8 polegadas, chip Exynos 2200, câmera de 108 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Samsung%20Galaxy%20S24" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-      <div class="produto">
-        <img src="note13pro.png" alt="Xiaomi 13 Pro">
-        <h3>Xiaomi 13 Pro</h3>
-        <p>Tela AMOLED de 6,73 polegadas, chip Snapdragon 8 Gen 2, câmera de 50 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Xiaomi%2013%20Pro" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-      <div class="produto">
-        <img src="google_pixel_8.png" alt="Google Pixel 8 Pro">
-        <h3>Google Pixel 8 Pro</h3>
-        <p>Tela OLED de 6,7 polegadas, chip Tensor G3, câmera de 50 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20Google%20Pixel%208%20Pro" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-      <div class="produto">
-        <img src="oneplus_11.png" alt="OnePlus 11">
-        <h3>OnePlus 11</h3>
-        <p>Tela Fluid AMOLED de 6,7 polegadas, chip Snapdragon 8 Gen 2, câmera de 50 MP.</p>
-        <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20OnePlus%2011" class="btn-saiba-mais" target="_blank">Saiba mais</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ícone flutuante do WhatsApp -->
-  <a href="https://wa.me/5567998855290?text=Ol%C3%A1%20quero%20saber%20mais%20sobre%20o%20iphone%2016%20pro%20max" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-  <footer class="rodape">
-    <div class="container">
-        <!-- Coluna 1: Informações da Loja -->
-        <div class="coluna">
-            <h3>TG | Smartphone e acessorios</h3>
-            <p>Somos especializados em produtos de tecnologia de ponta, oferecendo qualidade e sofisticação para nossos clientes.</p>
-        </div>
-
-        <!-- Coluna 2: Contatos -->
-        <div class="coluna">
-            <h3>Contato</h3>
-            <ul>
-                <li><strong>E-mail:</strong> contato@loja.com</li>
-                <li><strong>Telefone:</strong> (11) 1234-5678</li>
-                <li>
-                    <strong>Redes Sociais:</strong>
-                    <div class="redes-sociais">
-                        <a href="#" target="_blank"><img src="icons8-instagram-48.png" alt="Instagram"></a>
-                        <a href="#" target="_blank"><img src="icons8-facebook-50.png" alt="Facebook"></a>
-                        <!-- <a href="#" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a> -->
-                    </div>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Coluna 3: Copyright e Links -->
-        <div class="coluna">
-            <h3>Informações</h3>
-            <ul>
-                <li><a href="#">Entre em contato</a></li>
-                <li><a href="#">Como funciona</a></li>
-                <li><a href="#">Formas de pagamento</a></li>
-            </ul>
-            <p>&copy; 2025 - <a href="https://github.com/PedroGabe310">PedroGabe310</a>. Todos os direitos reservados.</p>
-        </div>
-    </div>
-  </footer>
   <script src="scripts.js"></script>
 </body>
 </html>
